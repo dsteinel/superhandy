@@ -4,7 +4,7 @@ This is a nice helper belt for bugfixing websites and finding stupid mistakes
 - - -
 
 ### Shitty horizontal scrollbar
-find overflowing content
+find an overflowing content on website. Just put this in your browser and find the honkey element
 
 ```javascript
 var d = document.documentElement.offsetWidth;
