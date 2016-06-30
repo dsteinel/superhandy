@@ -32,3 +32,28 @@ Jump to a specific location on a page with an anchor link. If you have a fixed n
     height: 0;
   }
 ```
+
+
+### Center Backgroundvideo
+http://alancrissey.com/articles/stupid-css-tricks/
+
+```css
+  .video {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+  
+    @media screen and (max-aspect-ratio: 239/100) {
+      width: auto;
+      height: 100%;
+    }
+  }
+```
