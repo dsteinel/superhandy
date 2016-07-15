@@ -57,3 +57,57 @@ http://alancrissey.com/articles/stupid-css-tricks/
     }
   }
 ```
+
+### Event Mixin
+
+```css
+@mixin on-event($self: false) {
+	@if $self {
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+
+	} @else {
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
+}
+```
+#### usage: 
+```css
+a {
+  color: black;
+  
+  @include on-event() {
+    color: red;
+  }
+```
+
+
+### Nice Bullet List
+Lets style a normal bullet list a little bit nicer. Without any svg or similar.
+
+```css
+@mixin nice-bullet-list($color) {
+	list-style-type: none;
+	position: relative;
+	margin-left: 1em;
+	padding-left: 0;
+
+	li:before {
+		content: "\2022"; // round bubble
+		position: absolute;
+		left: -1em;
+		margin-right: 5px;
+		color: $color;
+		font-size: 3rem;
+		line-height: 0.5;
+	}
+}
+```
