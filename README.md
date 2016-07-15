@@ -59,7 +59,7 @@ http://alancrissey.com/articles/stupid-css-tricks/
 ```
 
 ### Event Mixin
-
+A little helper for using not just one event. Better accessibility.
 ```css
 @mixin on-event($self: false) {
 	@if $self {
